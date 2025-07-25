@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="style.css">
+
+    <title>Scientific Calculator</title>
+  
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" id="display" readonly>
+        <div class="buttons">
+            <button onclick="clearDisplay()" class="clr">C</button>
+            <button onclick="backspace()">⌫</button>
+            <button onclick="append('(')">(</button>
+            <button onclick="append(')')">)</button>
+            <button onclick="append('/')">÷</button>
+
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('*')">×</button>
+            <button onclick="append('^')">^</button>
+
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('-')">−</button>
+            <button onclick="append('sqrt(')">√</button>
+
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('+')">+</button>
+            <button onclick="append('log(')">log</button>
+
+            <button onclick="append('0')" class="span-2">0</button>
+            <button onclick="append('.')">.</button>
+            <button onclick="append('pi')">π</button>
+            <button onclick="append('e')">e</button>
+            <button onclick="calculate()" class="eq">=</button>
+
+            <button onclick="append('sin(')">sin</button>
+            <button onclick="append('cos(')">cos</button>
+            <button onclick="append('tan(')">tan</button>
+            <button onclick="append('ln(')">ln</button>
+            <button onclick="append('abs(')">|x|</button>
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById('display');
+
+        function append(val) {
+            display.value += val;
+        }
+
+        function clearDisplay() {
+            display.value = '';
+        }
+
+        function backspace() {
+            display.value = display.value.slice(0, -1);
+        }
+
+        function calculate() {
+            let expr = display.value
+                .replace(/π|pi/g, 'Math.PI')
+                .replace(/e/g, 'Math.E')
+                .replace(/sqrt\(/g, 'Math.sqrt(')
+                .replace(/log\(/g, 'Math.log10(')
+                .replace(/ln\(/g, 'Math.log(')
+                .replace(/sin\(/g, 'Math.sin(')
+                .replace(/cos\(/g, 'Math.cos(')
+                .replace(/tan\(/g, 'Math.tan(')
+                .replace(/abs\(/g, 'Math.abs(')
+                .replace(/\^/g, '**');
+            try {
+                // Evaluate with Function constructor for safety
+                let result = Function('"use strict";return (' + expr + ')')();
+                if (result === undefined || isNaN(result)) throw Error();
+                display.value = result;
+            } catch {
+                display.value = 'Error';
+            }
+        }
+
+        // Optional: Keyboard support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') calculate();
+            else if (e.key === 'Backspace') backspace();
+            else if (e.key === 'Escape') clearDisplay();
+        });
+    </script>
+</body>
+</html>

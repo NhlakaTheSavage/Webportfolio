@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vonko - Playlist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="playlist-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">Vonko</div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-search"></i> Search</a>
+                <a href="#" class="active"><i class="fas fa-list"></i> Library</a>
+                <a href="#"><i class="fas fa-download"></i> Downloads</a>
+            </div>
+            <div class="profile-icon">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Playlist Header -->
+            <section class="playlist-header">
+                <div class="playlist-cover" style="background-image: url('https://via.placeholder.com/300');"></div>
+                <div class="playlist-info">
+                    <div class="playlist-type">PLAYLIST</div>
+                    <h1 class="playlist-title">Bhinca Mix</h1>
+                    <div class="playlist-description">Perfect tracks to keep you motivated during your workout session.</div>
+                    <div class="playlist-meta">
+                        <span class="playlist-owner">Created by <a href="#">Username</a></span>
+                        <span class="playlist-stats">15 songs, 58 min</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Playlist Actions -->
+            <section class="playlist-actions">
+                <button class="play-all-btn">
+                    <i class="fas fa-play"></i> Play All
+                </button>
+                <div class="action-buttons">
+                    <button class="action-btn like-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="action-btn download-btn">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn more-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Playlist Tracks -->
+            <section class="playlist-tracks">
+                <div class="tracks-header">
+                    <div class="track-number">#</div>
+                    <div class="track-title">TITLE</div>
+                    <div class="track-artist">ARTIST</div>
+                    <div class="track-album">ALBUM</div>
+                    <div class="track-duration"><i class="far fa-clock"></i></div>
+                </div>
+                
+                <div class="track-list">
+                    <!-- Track 1 -->
+                    <div class="track-item">
+                        <div class="track-number">1</div>
+                        <div class="track-title">
+                            <div class="track-img" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="track-name-container">
+                                <div class="track-name">Uyinja</div>
+                                <div class="track-explicit">A</div>
+                            </div>
+                        </div>
+                        <div class="track-artist">Mdumazi</div>
+                        <div class="track-album">Angifune mjolo</div>
+                        <div class="track-duration">3:45</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-plus"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Track 2 -->
+                    <div class="track-item">
+                        <div class="track-number">2</div>
+                        <div class="track-title">
+                            <div class="track-img" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="track-name-container">
+                                <div class="track-name">Ayaphi Amaphoyisa</div>
+                            </div>
+                        </div>
+                        <div class="track-artist">Mroza</div>
+                        <div class="track-album">ayaphi amaphoyisa</div>
+                        <div class="track-duration">4:12</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-plus"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Track 3 -->
+                    <div class="track-item active">
+                        <div class="track-number"><i class="fas fa-volume-up"></i></div>
+                        <div class="track-title">
+                            <div class="track-img" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="track-name-container">
+                                <div class="track-name">Ku-late ku-Late</div>
+                                <div class="track-explicit">E</div>
+                            </div>
+                        </div>
+                        <div class="track-artist">Uzondi</div>
+                        <div class="track-album">into yamahhala</div>
+                        <div class="track-duration">3:28</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn active"><i class="fas fa-heart"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-plus"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Track 4 -->
+                    <div class="track-item">
+                        <div class="track-number">4</div>
+                        <div class="track-title">
+                            <div class="track-img" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="track-name-container">
+                                <div class="track-name">Siyazithandanela</div>
+                            </div>
+                        </div>
+                        <div class="track-artist">Mjabulisi</div>
+                        <div class="track-album">Siyazithandanela</div>
+                        <div class="track-duration">4:05</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-plus"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Track 5 -->
+                    <div class="track-item">
+                        <div class="track-number">5</div>
+                        <div class="track-title">
+                            <div class="track-img" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="track-name-container">
+                                <div class="track-name">Ize</div>
+                                <div class="track-explicit">E</div>
+                            </div>
+                        </div>
+                        <div class="track-artist">Abakwethu</div>
+                        <div class="track-album">Ize</div>
+                        <div class="track-duration">3:52</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-plus"></i></button>
+                            <button class="track-action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommended Based on This Playlist -->
+            <section class="section">
+                <h2>Recommended Based on This Playlist</h2>
+                <div class="media-grid">
+                    <div class="media-item">
+                        <div class="media-image" style="background-image: url('https://via.placeholder.com/150');"></div>
+                        <h4>High Intensity</h4>
+                        <p>Cardio Mix</p>
+                    </div>
+                    <div class="media-item">
+                        <div class="media-image" style="background-image: url('https://via.placeholder.com/150');"></div>
+                        <h4>Power Hour</h4>
+                        <p>Strength Training</p>
+                    </div>
+                    <div class="media-item">
+                        <div class="media-image" style="background-image: url('https://via.placeholder.com/150');"></div>
+                        <h4>Cool Down</h4>
+                        <p>Post-Workout</p>
+                    </div>
+                    <div class="media-item">
+                        <div class="media-image" style="background-image: url('https://via.placeholder.com/150');"></div>
+                        <h4>Running Beats</h4>
+                        <p>Outdoor Workout</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Player Bar -->
+        <div class="player-bar">
+            <div class="now-playing">
+                <div class="thumbnail" style="background-image: url('https://via.placeholder.com/50');"></div>
+                <div class="track-info">
+                    <h4>Pump It Up</h4>
+                    <p>Fitness Crew</p>
+                </div>
+            </div>
+            <div class="player-controls">
+                <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+                <button class="control-btn play-btn"><i class="fas fa-pause"></i></button>
+                <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+            </div>
+            <div class="progress-container">
+                <span class="current-time">1:45</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <span class="total-time">3:28</span>
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-slider">
+                    <div class="volume-level" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add to Playlist Modal (Hidden by default) -->
+    <div class="modal" id="add-to-playlist-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add to Playlist</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Find a playlist" class="playlist-search">
+                </div>
+                <div class="playlist-list">
+                    <div class="playlist-option">
+                        <div class="playlist-option-img" style="background-image: url('https://via.placeholder.com/40');"></div>
+                        <div class="playlist-option-info">
+                            <h4>Chill Vibes</h4>
+                            <p>23 songs</p>
+                        </div>
+                        <button class="add-btn">Add</button>
+                    </div>
+                    <div class="playlist-option">
+                        <div class="playlist-option-img" style="background-image: url('https://via.placeholder.com/40');"></div>
+                        <div class="playlist-option-info">
+                            <h4>Road Trip</h4>
+                            <p>18 songs</p>
+                        </div>
+                        <button class="add-btn">Add</button>
+                    </div>
+                    <div class="playlist-option">
+                        <div class="playlist-option-img" style="background-image: url('https://via.placeholder.com/40');"></div>
+                        <div class="playlist-option-info">
+                            <h4>Party Mix</h4>
+                            <p>32 songs</p>
+                        </div>
+                        <button class="add-btn">Add</button>
+                    </div>
+                </div>
+                <div class="create-new-playlist">
+                    <button class="new-playlist-btn">
+                        <i class="fas fa-plus"></i> Create New Playlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="playlist.js"></script>
+</body>
+</html>
